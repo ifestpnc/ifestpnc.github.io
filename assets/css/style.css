@@ -187,7 +187,7 @@ h6 {
 
 .section-header h2 {
   font-size: 36px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; defaultnya*/
   text-align: center;
   font-weight: 700;
   margin-bottom: 10px;
@@ -689,8 +689,15 @@ h6 {
   line-height: 1;
   border: solid #d3f321;
 }
+.btn-outline-schedule {
+  border: solid #d3f321;
+}
 .btn-outline-video:hover {
   background: #d4f321c0;
+}
+.btn-outline-schedule:hover {
+  border: solid #e5f046;
+  background-color:#e5f046;
 }
 
 #hero .play-btn:hover::before {
@@ -797,7 +804,7 @@ h6 {
 #about h3 {
   font-size: 18px;
   font-weight: bold;
-  text-transform: uppercase;
+  /* text-transform: uppercase; defaultnya*/
   margin-bottom: 10px;
   color: #fff;
 }
@@ -1003,8 +1010,9 @@ h6 {
 }
 
 #schedule .schedule-item .speaker {
-  width: 60px;
-  height: 60px;
+  /* width dan height defaultnya 60px */
+  width: 90px;
+  height: 90px;
   overflow: hidden;
   border-radius: 50%;
   float: left;
