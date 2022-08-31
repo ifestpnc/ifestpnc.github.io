@@ -98,6 +98,24 @@ h6 {
   opacity: 1;
 }
 
+.label-contact{
+  background:rgb(222, 224, 222);
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  padding: 10px 70px;
+  border-radius: 2%;
+  text-decoration: none;
+  transition: all 0.3s;
+  position: fixed;
+  left: 15px;
+  bottom:150px;
+  color: #101522;
+}
+.label-contact span {
+  padding-left: 5px;
+}
 .contact-one{
   background:green;
   display: block;
@@ -110,7 +128,7 @@ h6 {
   transition: all 0.3s;
   position: fixed;
   left: 15px;
-  bottom:15px;
+  bottom: 80px;
 }
 .contact-two{
   background:green;
@@ -118,11 +136,13 @@ h6 {
   width: 40px;
   height: 40px;
   font-weight: bold;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
   text-decoration: none;
   transition: all 0.3s;
   position: fixed;
   left: 15px;
-  bottom:80px;
+  bottom:15px;
 }
 .contact-one i,.contact-two i {
   font-size: 28px;
