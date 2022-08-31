@@ -84,7 +84,7 @@ h6 {
 
 .back-to-top i {
   font-size: 28px;
-  color: #fff;
+  color: rgba(129, 129, 129, 0.918);
   line-height: 0;
 }
 
@@ -105,7 +105,8 @@ h6 {
   height: 40px;
   font-weight: bold;
   padding: 10px 70px;
-  border-radius: 2%;
+  border-radius: 7%;
+  -webkit-border-radius: 7%;
   text-decoration: none;
   transition: all 0.3s;
   position: fixed;
@@ -117,7 +118,7 @@ h6 {
   padding-left: 5px;
 }
 .contact-one{
-  background:green;
+  background:#25D366;
   display: block;
   width: 40px;
   height: 40px;
@@ -131,7 +132,7 @@ h6 {
   bottom: 80px;
 }
 .contact-two{
-  background:green;
+  background:#25D366;
   display: block;
   width: 40px;
   height: 40px;
@@ -149,7 +150,9 @@ h6 {
   color: #fff;
   line-height: 0;
 }
-.contact-one:hover{background: blue}
+.contact-one:hover,.contact-two:hover{
+  background: #128C7E
+}
 
 /* Sections Header
 --------------------------------*/
