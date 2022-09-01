@@ -566,7 +566,7 @@ background: linear-gradient(to bottom right, #E8D912, #F2E68A);
 
 #hero:before {
   content: "";
-  background: rgba(6, 12, 34, 0.8);
+  background: rgba(6, 12, 34, 0.349);
   position: absolute;
   bottom: 0;
   top: 0;
