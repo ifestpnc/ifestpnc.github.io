@@ -552,7 +552,7 @@ background: linear-gradient(to bottom right, #E8D912, #F2E68A);
 #hero {
   width: 100%;
   height: 100vh;
-  background: url(../img/gallery/puncak-12.JPG) top center;
+  background: url(../img/gallery/ngasal.jpg) top center;
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -1756,10 +1756,6 @@ background: linear-gradient(to bottom right, #E8D912, #F2E68A);
 
 #footer .footer-top .footer-links ul a {
   color: #eee;
-}
-
-#footer .footer-top .footer-links ul a:hover {
-  color: #d3f321;
 }
 
 #footer .footer-top .footer-contact {
