@@ -260,11 +260,15 @@ h6 {
 --------------------------------------------------------------*/
 .buy-tickets {
   color: black;
-  background: #d3f321;
+  /* Created with https://www.css-gradient.com */
+background: #E8D912;
+background: -webkit-linear-gradient(top left, #E8D912, #F2E68A);
+background: -moz-linear-gradient(top left, #E8D912, #F2E68A);
+background: linear-gradient(to bottom right, #E8D912, #F2E68A);
   padding: 7px 22px;
   margin: 0 0 0 15px;
   border-radius: 50px;
-  border: 2px solid #d3f321;
+  
   transition: all ease-in-out 0.3s;
   font-weight: 500;
   line-height: 1;
@@ -273,8 +277,8 @@ h6 {
 }
 
 .buy-tickets:hover {
-  background: none;
-  color: #fff;
+  background: #E8D912;
+  color: black;
 }
 
 .buy-tickets:focus {
@@ -599,7 +603,8 @@ h6 {
 }
 
 #hero h1 span {
-  color: #d3f321;
+  /* Created with https://www.css-gradient.com */
+color: #E8D912;
 }
 
 @media (max-width: 991px) {
@@ -969,10 +974,25 @@ h6 {
     /* margin button schedule untuk device smartphone */
     margin: 5% 0;
   }
+  /* dua ini masih susah */
+  #footer .footer-top .footer-contact {
+    display: flex;
+    justify-content: center;
+  }
+  #footer .footer-top .social-links a {
+    display: flex;
+    margin-top: 60px;
+    justify-content: center;
+}
+  
 }
 
 #schedule .nav-tabs a.active {
-  background-color: #d3f321;
+  /* Created with https://www.css-gradient.com */
+background: #E8D912;
+background: -webkit-linear-gradient(top left, #E8D912, #F2E68A);
+background: -moz-linear-gradient(top left, #E8D912, #F2E68A);
+background: linear-gradient(to bottom right, #E8D912, #F2E68A);
   color: black;
 }
 
@@ -1090,6 +1110,7 @@ h6 {
   #venue .venue-info h3 {
     font-size: 24px;
   }
+  
 }
 
 #venue .venue-info p {
@@ -1428,18 +1449,22 @@ h6 {
   opacity: 0.7;
 }
 
-#buy-tickets .card .btn {
+#buy-tickets .card a {
   font-size: 15px;
   border-radius: 50px;
   padding: 10px 40px;
   transition: all 0.2s;
-  background-color: #d3f321;
+  /* Created with https://www.css-gradient.com */
+background: #E8D912;
+background: -webkit-linear-gradient(top left, #E8D912, #F2E68A);
+background: -moz-linear-gradient(top left, #E8D912, #F2E68A);
+background: linear-gradient(to bottom right, #E8D912, #F2E68A);
   border: 0;
-  color: #fff;
+  color: black;
 }
 
-#buy-tickets .card .btn:hover {
-  background-color: #e0072f;
+#buy-tickets .card a:hover {
+  background: #E8D912;
 }
 
 #buy-tickets #buy-ticket-modal input,
@@ -1519,7 +1544,7 @@ h6 {
 
 @media (min-width: 768px) {
   #contact .contact-phone {
-    border-left: 1px solid #ddd;
+    /* border-left: 1px solid #ddd; */
     border-right: 1px solid #ddd;
   }
 }
@@ -1649,9 +1674,14 @@ h6 {
   color: #fff;
 }
 
-#footer .footer-top .footer-info img {
+#footer .footer-top .footer-info .imghmti {
   height: 40px;
   margin-bottom: 10px;
+}
+#footer .footer-top .footer-info .imgpnc {
+  height: 55px;
+  margin-bottom: 12px;
+  margin-left: 10px;
 }
 
 #footer .footer-top .footer-info p {
@@ -1691,10 +1721,12 @@ h6 {
   font-size: 14px;
   font-weight: bold;
   color: #fff;
-  text-transform: uppercase;
   position: relative;
   padding-bottom: 12px;
-  border-bottom: 2px solid #d3f321;
+}
+#footer .footer-info h4 {
+  /* tambahan margin-left */
+  margin-left: 18px;
 }
 
 #footer .footer-top .footer-links {
@@ -1709,7 +1741,7 @@ h6 {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 5px;
-  color: #d3f321;
+  color: #fff;
   font-size: 18px;
 }
 
@@ -1761,6 +1793,10 @@ h6 {
 
 #footer .footer-top .footer-newsletter input[type=submit]:hover {
   background: #e0072f;
+}
+
+.footer-top .added {
+  margin-top:51px;
 }
 
 #footer .copyright {
