@@ -975,7 +975,7 @@ color: #E8D912;
     margin: 5% 0;
   }
   /* dua ini masih susah */
-  #footer .footer-top .footer-contact {
+  /* #footer .footer-top .footer-contact {
     display: flex;
     justify-content: center;
   }
@@ -983,7 +983,35 @@ color: #E8D912;
     display: flex;
     margin-top: 60px;
     justify-content: center;
-}
+  } */
+
+  .footer-top .container {
+    
+    max-width: 100%;
+  }
+  .footer-top .container h4 {
+    
+    text-align: center;
+  }
+  .footer-info span {
+    visibility: hidden;
+  }
+  .footer-links {
+    text-align: center;
+  }
+  .footer-links ul i {
+
+    display: none;
+  }
+   .footer-info .image-info {
+   
+   text-align: center;
+  }
+
+  
+  .footer-top .footer-contact .social-links {
+    text-align: center;
+  }
   
 }
 
@@ -1017,6 +1045,11 @@ background: linear-gradient(to bottom right, #E8D912, #F2E68A);
   border-bottom: 1px solid #cad4f6;
   padding-top: 15px;
   padding-bottom: 15px;
+  transition: background-color ease-in-out 0.3s;
+}
+.modal-body .first-schedule{
+  padding-top: 15px;
+  border-top: 1px solid #cad4f6;
   transition: background-color ease-in-out 0.3s;
 }
 
@@ -1727,6 +1760,9 @@ background: linear-gradient(to bottom right, #E8D912, #F2E68A);
 #footer .footer-info h4 {
   /* tambahan margin-left */
   margin-left: 18px;
+}
+#footer .footer-info span {
+  visibility: hidden;
 }
 
 #footer .footer-top .footer-links {
