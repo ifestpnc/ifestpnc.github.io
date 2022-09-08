@@ -562,6 +562,10 @@ background: linear-gradient(to bottom right, #E8D912, #F2E68A);
   #hero {
     background-attachment: fixed;
   }
+
+  #supporters center {
+    margin-top:25px;
+  }
 }
 
 #hero:before {
@@ -787,6 +791,9 @@ color: #E8D912;
   #about {
     background-attachment: fixed;
   }
+  #supporters center {
+    margin-top:25px;
+  }
 }
 
 #about:before {
@@ -984,7 +991,10 @@ color: #E8D912;
     margin-top: 60px;
     justify-content: center;
   } */
-
+  #supporters .last-sponsor-1 {
+    display: none;
+    justify-content:none;
+  }
   .footer-top .container {
     
     max-width: 100%;
@@ -1278,12 +1288,19 @@ background: linear-gradient(to bottom right, #E8D912, #F2E68A);
   padding: 60px 0;
 }
 
+/* 
+ku matikan
 #supporters .supporters-wrap {
   border-top: 1px solid #e0e5fa;
   border-left: 1px solid #e0e5fa;
   margin-bottom: 30px;
+} */
+#supporters .last-sponsor-1 {
+ 
+    display: flex;
+    justify-content:center;
+    margin-top: 4px;
 }
-
 #supporters .supporter-logo {
   padding: 30px;
   display: flex;
@@ -1394,6 +1411,9 @@ background: linear-gradient(to bottom right, #E8D912, #F2E68A);
   #subscribe {
     background-attachment: fixed;
   }
+  #supporters center {
+    margin-top:25px;
+  }
 }
 
 #subscribe .section-header h2,
@@ -1437,6 +1457,9 @@ background: linear-gradient(to bottom right, #E8D912, #F2E68A);
 @media (max-width: 460px) {
   #subscribe button {
     margin-top: 10px;
+  }
+  #supporters .last-sponsor-1 {
+    display:inline;
   }
 }
 
