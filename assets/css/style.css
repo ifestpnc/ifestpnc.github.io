@@ -1550,6 +1550,9 @@ background: linear-gradient(to bottom right, #E8D912, #F2E68A);
   background: #D8381F;
   color: #f6f7fd;
 }
+#buy-tickets .card li {
+  list-style: none;
+}
 
 #buy-tickets #buy-ticket-modal input,
 #buy-tickets #buy-ticket-modal select {
