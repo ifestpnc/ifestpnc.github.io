@@ -79,7 +79,7 @@ const venue = new Vue({
 const gallery = new Vue({
   el: "#gallery",
   data: {
-    img:{
+    gallery:{
       imgOne:"assets/img/gallery/pelatihan-8.JPG",
       imgTwo:"assets/img/gallery/pelatihan-1.JPG",
       imgThree:"assets/img/gallery/pelatihan-6.jpg",
