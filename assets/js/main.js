@@ -82,11 +82,8 @@ const gallery = new Vue({
     gallery:{
       imgOne:"assets/img/gallery/pelatihan-8.JPG",
       imgTwo:"assets/img/gallery/pelatihan-1.JPG",
-      imgThree:"assets/img/gallery/pelatihan-6.jpg",
       imgFour:"assets/img/gallery/pelatihan-7.JPG",
       imgFive:"assets/img/gallery/pelatihan-9.JPG",
-      imgSix:"assets/img/gallery/santunan-1.jpg",
-      imgSeven:"assets/img/gallery/santunan-3.jpg",
       imgEight:"assets/img/gallery/lomba-ml-2.JPG",
     }
   }
