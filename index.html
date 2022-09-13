@@ -25,6 +25,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.10"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" async=""></script>
 </head>
 
@@ -78,8 +79,8 @@
   <section id="hero">
     <div class="hero-container">
       <!-- <h1 class="mb-4 pb-0">The Annual<br><span>Marketing</span> Conference</h1> -->
-      <h1 class="mb-4 pb-0">Informatics <span>Festival</span><br>2022</h1>
-      <p class="mb-4 pb-0">"<i>Art of Technology</i>"</p>
+      <h1 class="mb-4 pb-0" v-html="hero.h1"></h1>
+      <p class="mb-4 pb-0" v-html="hero.p"></p>
       <!-- <a href="https://www.youtube.com/embed/V-W_fDrJzwk" class="glightbox play-btn mb-4"></a> -->
       <button type="button" class="btn btn-outline-video btn-lg btn-circle mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <i class="bi bi-play-circle"></i>
@@ -102,32 +103,19 @@
     </div>
   </div>
   <main id="main">
-
     <!-- ======= About Section ======= -->
     <section id="about">
       <div class="container" data-aos="fade-up">
         <div class="row">
-          <div class="col-lg-6">
-            <h2>Tentang IFEST</h2>
-            <p>
-              Informatics Festival (IFEST) merupakan serangkaian acara pada Dies Natalis
-              Jurusan Teknik Informatika. Acara yang akan diadakan seperti
-              Lomba Landing Page, Lomba Fotografi, Lomba Mobile Legends, 
-              Santunan Sahabat Yatim & Dhuafa,
-              Pelatihan Desain Grafis serta Pelatihan Pemrograman.</p>
+          <div class="col-lg-6" v-html="about.about">
           </div>
-          <div class="col-lg-3">
-            <h3>Dimana ?</h3>
-            <p>Politeknik Negeri Cilacap</p>
+          <div class="col-lg-3" v-html="about.loc">
           </div>
-          <div class="col-lg-3">
-            <h3>Kapan ?</h3>
-            <p>20 Juni 2022 - 16 Juli 2022</p>
+          <div class="col-lg-3" v-html="about.date">
           </div>
         </div>
       </div>
     </section><!-- End About Section -->
-
     <!-- ======= Speakers Section ======= -->
     <section id="speakers">
       <div class="container">
@@ -135,14 +123,13 @@
           <h2>Pengisi Acara</h2>
           <p>Berikut pengisi acara yang kami undang</p>
         </div>
-
         <div class="row">
           <div class="col-lg-4 col-md-6">
             <div class="speaker" data-aos="fade-up">
-              <img src="assets/img/gallery/pelatihan-4.JPG" alt="Speaker 1" class="img-fluid">
+              <img v-bind:src="teacher.urlone" alt="Speaker 1" class="img-fluid">
               <div class="details">
-                <h3><a href="#">Ipo Novianto, S.Kom.</a></h3>
-                <p>Narsum Pelatihan Pemrograman</p>
+                <h3><a href="#" v-text="teacher.nameOne"></a></h3>
+                <p v-text="teacher.deskOne"></p>
                 <div class="social">
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href=""><i class="bi bi-instagram"></i></a>
@@ -152,10 +139,10 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="speaker" data-aos="fade-up">
-              <img src="assets/img/gallery/pelatihan-10.jpg" alt="Speaker 2" class="img-fluid">
+              <img v-bind:src="teacher.urltwo" alt="Speaker 2" class="img-fluid">
               <div class="details">
-                <h3><a href="#">Abdul Rohman S, S.T., M.Kom.</a></h3>
-                <p>Narsum Pelatihan Desain Grafis</p>
+                <h3><a href="#" v-text="teacher.nameTwo"></a></h3>
+                <p v-text="teacher.deskTwo"></p>
                 <div class="social">
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href=""><i class="bi bi-instagram"></i></a>
@@ -165,7 +152,7 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="speaker" data-aos="fade-up">
-              <img src="assets/img/gallery/canteen-rasta.png" alt="Speaker 3" class="img-fluid">
+              <img v-bind:src="guest.urlguest" alt="Speaker 3" class="img-fluid">
               <div class="details">
                 <h3><a href="#">Canteen Rasta</a></h3>
                 <p>Guest Star</p>
@@ -405,112 +392,101 @@
 
         <div class="row g-0">
           <div class="col-lg-6 venue-map">
-            
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.672701899739!2d109.01706568328419!3d-7.717629568033483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e651293a2007061%3A0xf2805342d2da3715!2sPoliteknik%20Negeri%20Cilacap!5e0!3m2!1sid!2sid!4v1661764275455!5m2!1sid!2sid" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe v-bind:src="gmaps.maps" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
-
           <div class="col-lg-6 venue-info">
             <div class="row justify-content-center">
-              <div class="col-11 col-lg-8 position-relative">
-                <h3>Gedung D,<br/>Politeknik Negeri Cilacap</h3>
-                <p>
-                  Jl. Dr. Soetomo No.1, Karangcengis, Sidakaya,
-                  Kec. Cilacap Sel., Kabupaten Cilacap, 
-                  Jawa Tengah 53212</p>
+              <div class="col-11 col-lg-8 position-relative" v-html="gmaps.descript">
               </div>
             </div>
           </div>
         </div>
-
       </div>
-
       <div class="container-fluid venue-gallery-container" data-aos="fade-up">
         <div class="row g-0">
-
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/gallery/puncak-15.JPG" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/gallery/puncak-15.JPG" alt="" class="img-fluid">
+              <a v-bind:href="img.imgOne" class="glightbox" data-gall="venue-gallery">
+                <img v-bind:src="img.imgOne" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a v-bind:href="img.imgTwo" class="glightbox" data-gall="venue-gallery">
+                <img v-bind:src="img.imgTwo" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/gallery/puncak-13.JPG" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/gallery/puncak-13.JPG" alt="" class="img-fluid">
+              <a v-bind:href="img.imgThree" class="glightbox" data-gall="venue-gallery">
+                <img v-bind:src="img.imgThree" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a v-bind:href="img.imgFour" class="glightbox" data-gall="venue-gallery">
+                <img v-bind:src="img.imgFour" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a v-bind:href="img.imgFive" class="glightbox" data-gall="venue-gallery">
+                <img v-bind:src="img.imgFive" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a v-bind:href="img.imgSix" class="glightbox" data-gall="venue-gallery">
+                <img v-bind:src="img.imgSix" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a v-bind:href="img.imgSeven" class="glightbox" data-gall="venue-gallery">
+                <img v-bind:src="img.imgSeven" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/gallery/puncak-14.JPG" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/gallery/puncak-14.JPG" alt="" class="img-fluid">
+              <a v-bind:href="img.imgEight" class="glightbox" data-gall="venue-gallery">
+                <img v-bind:src="img.imgEight" alt="" class="img-fluid">
               </a>
             </div>
           </div>
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/gallery/puncak-4.JPG" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/gallery/puncak-4.JPG" alt="" class="img-fluid">
+              <a v-bind:href="img.imgNine" class="glightbox" data-gall="venue-gallery">
+                <img v-bind:src="img.imgNine" alt="" class="img-fluid">
               </a>
             </div>
           </div>
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/gallery/puncak-7.JPG" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/gallery/puncak-7.JPG" alt="" class="img-fluid">
+              <a v-bind:href="img.imgTen" class="glightbox" data-gall="venue-gallery">
+                <img v-bind:src="img.imgTen" alt="" class="img-fluid">
               </a>
             </div>
           </div>
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/gallery/puncak-16.JPG" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/gallery/puncak-16.JPG" alt="" class="img-fluid">
+              <a v-bind:href="img.imgEleven" class="glightbox" data-gall="venue-gallery">
+                <img v-bind:src="img.imgEleven" alt="" class="img-fluid">
               </a>
             </div>
           </div>
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/gallery/puncak-8.JPG" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/gallery/puncak-8.JPG" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/gallery/puncak-9.JPG" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/gallery/puncak-9.JPG" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/gallery/puncak-3.JPG" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/gallery/puncak-3.JPG" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/gallery/puncak-5.JPG" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/gallery/puncak-5.JPG" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/gallery/puncak-11.JPG" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/gallery/puncak-11.JPG" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="assets/img/gallery/puncak-12.JPG" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/gallery/puncak-12.JPG" alt="" class="img-fluid">
+              <a v-bind:href="img.imgTwelve" class="glightbox" data-gall="venue-gallery">
+                <img v-bind:src="img.imgTwelve" alt="" class="img-fluid">
               </a>
             </div>
           </div>
@@ -521,28 +497,25 @@
 
     <!-- ======= Gallery Section ======= -->
     <section id="gallery">
-
       <div class="container">
         <div class="section-header">
           <h2>Galeri</h2>
           <p>Beberapa galeri dari kegiatan IFEST 2022</p>
         </div>
       </div>
-
       <div class="gallery-slider swiper">
         <div class="swiper-wrapper align-items-center">
-          <div class="swiper-slide"><a href="assets/img/gallery/pelatihan-8.JPG" class="gallery-lightbox"><img src="assets/img/gallery/pelatihan-8.JPG" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/pelatihan-1.JPG" class="gallery-lightbox"><img src="assets/img/gallery/pelatihan-1.JPG" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/pelatihan-6.jpg" class="gallery-lightbox"><img src="assets/img/gallery/pelatihan-6.JPG" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/pelatihan-7.JPG" class="gallery-lightbox"><img src="assets/img/gallery/pelatihan-7.JPG" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/pelatihan-9.JPG" class="gallery-lightbox"><img src="assets/img/gallery/pelatihan-9.JPG" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/santunan-1.jpg" class="gallery-lightbox"><img src="assets/img/gallery/santunan-1.JPG" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/santunan-3.jpg" class="gallery-lightbox"><img src="assets/img/gallery/santunan-3.JPG" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/lomba-ml-2.JPG" class="gallery-lightbox"><img src="assets/img/gallery/lomba-ml-2.JPG" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a v-bind:href="img.imgOne" class="gallery-lightbox"><img v-bind:src="img.imgOne" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a v-bind:href="img.imgTwo" class="gallery-lightbox"><img v-bind:src="img.imgTwo" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a v-bind:href="img.imgThree" class="gallery-lightbox"><img v-bind:src="img.imgThree" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a v-bind:href="img.imgFour" class="gallery-lightbox"><img v-bind:src="img.imgFour" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a v-bind:href="img.imgFive" class="gallery-lightbox"><img v-bind:src="img.imgFive" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a v-bind:href="img.imgSix" class="gallery-lightbox"><img v-bind:src="img.imgSix" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a v-bind:href="img.imgSeven" class="gallery-lightbox"><img v-bind:src="img.imgSeven" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a v-bind:href="img.imgEight" class="gallery-lightbox"><img v-bind:src="img.imgEight" class="img-fluid" alt=""></a></div>
         </div>
         <div class="swiper-pagination"></div>
       </div>
-
     </section><!-- End Gallery Section -->
 <!-- ======= Buy Ticket Section ======= -->
 <section id="buy-tickets" class="section-with-bg">
@@ -653,42 +626,35 @@
 </section><!-- End Buy Ticket Section -->
     <!-- ======= Supporters Section ======= -->
     <section id="supporters" class="section-with-bg">
-
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Sponsor</h2>
         </div>
-
         <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in">
-
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="assets/img/supporters/al-azhar-clp-logo.png" class="img-fluid" alt="">
+              <img v-bind:src="img.imgOne" class="img-fluid" alt="">
             </div>
           </div>
-
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="assets/img/supporters/GSC.png" class="img-fluid" alt="">
+              <img v-bind:src="img.imgTwo" class="img-fluid" alt="">
             </div>
           </div>
-
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="assets/img/supporters/babeh-clp-logo.JPG" class="img-fluid" alt="">
+              <img v-bind:src="img.imgThree" class="img-fluid" alt="">
             </div>
           </div>
-
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="assets/img/supporters/OPPO_logo.svg" class="img-fluid" alt="">
+              <img v-bind:src="img.imgFour" class="img-fluid" alt="">
             </div>
           </div>
-
           <center>
             <div class="col-lg-3 col-md-4 col-xs-6">
               <div class="supporter-logo">
-                <img src="assets/img/supporters/telkomsel-logo.png" class="img-fluid" alt="">
+                <img v-bind:src="img.imgFive" class="img-fluid" alt="">
               </div>
             </div>
           </center> 
@@ -1099,13 +1065,13 @@
       <div class="container">
         <div class="row d-flex justify-content-between">
           <div class="col-lg-2 col-md-6 footer-info">
-            <h4>Organizers <span>by</span></h4>
+            <h4>Organizer <span>by</span></h4>
             <div class="image-info">
               <a href="https://jti.pnc.ac.id/">
-                <img src="assets/img/default_image_HMTI_PNC_1.png" class="imghmti" alt="hmti">
+                <img v-bind:src="img.imgOne" class="imghmti" alt="hmti">
               </a>
               <a href="https://pnc.ac.id/">
-                <img src="assets/img/logoPNC.png" class="imgpnc" alt="pnc">
+                <img v-bind:src="img.imgTwo" class="imgpnc" alt="pnc">
               </a>
             </div>
           </div>
@@ -1125,7 +1091,6 @@
             <div class="col-lg-2 col-md-12 footer-contact">
               <h4>Media Sosial</h4>
              <div class="social-links mt-3">
-                <a href="#"><i class="bi bi-facebook"></i></a>
                 <a href="https://www.instagram.com/ifestpnc14/"><i class="bi bi-instagram"></i></a>
                 <a href="#"><i class="bi bi-tiktok"></i></a>
               </div>
@@ -1144,7 +1109,7 @@
         All the links in the footer should remain intact.
         You can delete the links only if you purchased the pro version.
         Licensing information: https://bootstrapmade.com/license/
-        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
+        Purchase the pro version with contact form: https://bootstrapmade.com/buy/?theme=TheEvent
       -->
         Made by <a href="https://www.instagram.com/iamziddann/">RISTEK HMTI</a>
       </div>
@@ -1175,7 +1140,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
 
 </html>

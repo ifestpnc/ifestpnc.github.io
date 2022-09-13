@@ -246,7 +246,7 @@ h6 {
 #header #logo img {
   padding: 0;
   /* tambahan margin kiri kanan */
-  margin: 0 40px;
+  margin: 0 20px;
   /* defaultnya 40px */
   max-height: 60px;
   background-color: wheat;

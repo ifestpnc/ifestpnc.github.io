@@ -4,6 +4,114 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+const hero = new Vue({
+  el: "#hero",
+  data: {
+    hero: {
+      h1: "Informatics <span>Festival</span><br>2022",
+      p:'"<i>Art of Technology</i>"',
+    }, 
+  }
+});
+
+const about=new Vue({
+  el: "#about",
+  data: {
+    about: {
+      about:"<h2>Tentang IFEST</h2>" +
+            "<p>" +
+              "Informatics Festival (IFEST) merupakan serangkaian acara pada Dies Natalis " +  
+              "Jurusan Teknik Informatika. Acara yang akan diadakan seperti " +
+              "Lomba Landing Page, Lomba Fotografi, Lomba Mobile Legends, " +
+              "Santunan Sahabat Yatim & Dhuafa, " +
+              "Pelatihan Desain Grafis serta Pelatihan Pemrograman." +
+            "</p>",
+      loc:"<h3>Dimana ?</h3>" +
+          "<p>Politeknik Negeri Cilacap</p>",
+      date:"<h3>Kapan ?</h3>"+
+            "<p>20 Juni 2022 - 16 Juli 2022</p>"
+    }
+  }
+});
+
+const speakers=new Vue({
+  el: "#speakers",
+  data: {
+    teacher:{
+      urlone:"assets/img/gallery/pelatihan-4.JPG",
+      urltwo:"assets/img/gallery/pelatihan-10.jpg",
+      nameOne:"Ipo Novianto, S.Kom.",
+      deskOne:"Narsum Pelatihan Pemrograman",
+      nameTwo:"Abdul Rohman S, S.T., M.Kom.",
+      deskTwo:"Narsum Pelatihan Desain Grafis",
+    },
+    guest:{
+      urlguest:"assets/img/gallery/canteen-rasta.png"
+    }
+  }
+});
+const venue = new Vue({
+  el: "#venue",
+  data: {
+    gmaps: {
+      maps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.672701899739!2d109.01706568328419!3d-7.717629568033483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e651293a2007061%3A0xf2805342d2da3715!2sPoliteknik%20Negeri%20Cilacap!5e0!3m2!1sid!2sid!4v1661764275455!5m2!1sid!2sid",
+      descript:"<h3>Gedung D,<br/>Politeknik Negeri Cilacap</h3>" +        
+                "<p>Jl. Dr. Soetomo No.1, Karangcengis, Sidakaya, " +
+                "Kec. Cilacap Sel., Kabupaten Cilacap, " +
+                "Jawa Tengah 53212</p>",
+    },
+    img:{
+      imgOne:"assets/img/gallery/puncak-15.JPG",
+      imgTwo:"assets/img/gallery/puncak-13.JPG",
+      imgThree:"assets/img/gallery/puncak-14.JPG",
+      imgFour:"assets/img/gallery/puncak-4.JPG",
+      imgFive:"assets/img/gallery/puncak-7.JPG",
+      imgSix:"assets/img/gallery/puncak-16.JPG",
+      imgSeven:"assets/img/gallery/puncak-8.JPG",
+      imgEight:"assets/img/gallery/puncak-9.JPG",
+      imgNine:"assets/img/gallery/puncak-3.JPG",
+      imgTen:"assets/img/gallery/puncak-5.JPG",
+      imgEleven:"assets/img/gallery/puncak-11.JPG",
+      imgTwelve:"assets/img/gallery/puncak-12.JPG",
+    }
+  }
+});
+const gallery = new Vue({
+  el: "#gallery",
+  data: {
+    img:{
+      imgOne:"assets/img/gallery/pelatihan-8.JPG",
+      imgTwo:"assets/img/gallery/pelatihan-1.JPG",
+      imgThree:"assets/img/gallery/pelatihan-6.jpg",
+      imgFour:"assets/img/gallery/pelatihan-7.JPG",
+      imgFive:"assets/img/gallery/pelatihan-9.JPG",
+      imgSix:"assets/img/gallery/santunan-1.jpg",
+      imgSeven:"assets/img/gallery/santunan-3.jpg",
+      imgEight:"assets/img/gallery/lomba-ml-2.JPG",
+    }
+  }
+});
+const supporters = new Vue({
+  el: "#supporters",
+  data: {
+    img:{
+      imgOne:"assets/img/supporters/al-azhar-clp-logo.png",
+      imgTwo:"assets/img/supporters/GSC.png",
+      imgThree:"assets/img/supporters/babeh-clp-logo.JPG",
+      imgFour:"assets/img/supporters/OPPO_logo.svg",
+      imgFive:"assets/img/supporters/telkomsel-logo.png",
+    }
+  }
+});
+const footer = new Vue({
+  el: "#footer",
+  data: {
+    img:{
+      imgOne:"assets/img/default_image_HMTI_PNC_1.png",
+      imgTwo:"assets/img/logoPNC.png",
+    }
+  }
+});
 (function() {
   "use strict";
 
