@@ -76,6 +76,21 @@ const venue = new Vue({
     }
   }
 });
+const gallery = new Vue({
+  el: "#gallery",
+  data: {
+    gallery:{
+      imgOne:"assets/img/gallery/pelatihan-8.JPG",
+      imgTwo:"assets/img/gallery/pelatihan-1.JPG",
+      imgThree:"assets/img/gallery/pelatihan-6.png",
+      imgFour:"assets/img/gallery/pelatihan-7.JPG",
+      imgFive:"assets/img/gallery/pelatihan-9.JPG",
+      imgSix:"assets/img/gallery/santunan-1.png",
+      imgSeven:"assets/img/gallery/santunan-3.png",
+      imgEight:"assets/img/gallery/lomba-ml-2.JPG",
+    }
+  }
+});
 const supporters = new Vue({
   el: "#supporters",
   data: {
