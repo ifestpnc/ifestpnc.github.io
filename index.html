@@ -503,18 +503,7 @@
           <p>Beberapa galeri dari kegiatan IFEST 2022</p>
         </div>
       </div>
-      <div class="gallery-slider swiper">
-        <div class="swiper-wrapper align-items-center">
-          <div class="swiper-slide"><a v-bind:href="gallery.imgOne" class="gallery-lightbox"><img v-bind:src="gallery.imgOne" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a v-bind:href="gallery.imgTwo" class="gallery-lightbox"><img v-bind:src="gallery.imgTwo" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/pelatihan-6.jpg" class="gallery-lightbox"><img src="assets/img/gallery/pelatihan-6.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a v-bind:href="gallery.imgFour" class="gallery-lightbox"><img v-bind:src="gallery.imgFour" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a v-bind:href="gallery.imgFive" class="gallery-lightbox"><img v-bind:src="gallery.imgFive" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/santunan-1.jpg" class="gallery-lightbox"><img src="assets/img/gallery/santunan-1.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/santunan-3.jpg" class="gallery-lightbox"><img src="assets/img/gallery/santunan-3.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a v-bind:href="gallery.imgEight" class="gallery-lightbox"><img v-bind:src="gallery.imgEight" class="img-fluid" alt=""></a></div>
-        </div>
-        <div class="swiper-pagination"></div>
+      <div class="gallery-slider swiper" v-html="gallery">
       </div>
     </section><!-- End Gallery Section -->
 <!-- ======= Buy Ticket Section ======= -->

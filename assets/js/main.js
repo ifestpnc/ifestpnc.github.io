@@ -79,13 +79,17 @@ const venue = new Vue({
 const gallery = new Vue({
   el: "#gallery",
   data: {
-    gallery:{
-      imgOne:"assets/img/gallery/pelatihan-8.JPG",
-      imgTwo:"assets/img/gallery/pelatihan-1.JPG",
-      imgFour:"assets/img/gallery/pelatihan-7.JPG",
-      imgFive:"assets/img/gallery/pelatihan-9.JPG",
-      imgEight:"assets/img/gallery/lomba-ml-2.JPG",
-    }
+    gallery:'<div class="swiper-wrapper align-items-center">'+
+    '<div class="swiper-slide"><a href="assets/img/gallery/pelatihan-8.JPG" class="gallery-lightbox"><img src="assets/img/gallery/pelatihan-8.JPG" class="img-fluid" alt=""></a></div>' +
+    '<div class="swiper-slide"><a href="assets/img/gallery/pelatihan-1.JPG" class="gallery-lightbox"><img src="assets/img/gallery/pelatihan-1.JPG" class="img-fluid" alt=""></a></div>' +
+    '<div class="swiper-slide"><a href="assets/img/gallery/pelatihan-6.jpg" class="gallery-lightbox"><img src="assets/img/gallery/pelatihan-6.jpg" class="img-fluid" alt=""></a></div>' +
+    '<div class="swiper-slide"><a href="assets/img/gallery/pelatihan-7.JPG" class="gallery-lightbox"><img src="assets/img/gallery/pelatihan-7.JPG" class="img-fluid" alt=""></a></div>' +
+    '<div class="swiper-slide"><a href="assets/img/gallery/pelatihan-9.JPG" class="gallery-lightbox"><img src="assets/img/gallery/pelatihan-9.JPG" class="img-fluid" alt=""></a></div>' +
+    '<div class="swiper-slide"><a href="assets/img/gallery/santunan-1.jpg" class="gallery-lightbox"><img src="assets/img/gallery/santunan-1.jpg" class="img-fluid" alt=""></a></div>' +
+    '<div class="swiper-slide"><a href="assets/img/gallery/santunan-3.jpg" class="gallery-lightbox"><img src="assets/img/gallery/santunan-3.jpg" class="img-fluid" alt=""></a></div>' +
+    '<div class="swiper-slide"><a href="assets/img/gallery/lomba-ml-2.JPG" class="gallery-lightbox"><img src="assets/img/gallery/lomba-ml-2.JPG" class="img-fluid" alt=""></a></div>' +
+  '</div>' +
+  '<div class="swiper-pagination"></div>'
   }
 });
 const supporters = new Vue({
